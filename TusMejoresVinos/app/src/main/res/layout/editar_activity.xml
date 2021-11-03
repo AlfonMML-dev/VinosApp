@@ -192,26 +192,32 @@
         style="@style/bt_Style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/lMarginEndDefault"
+        android:layout_marginStart="@dimen/bt_lMarginStartEnd"
         android:layout_marginBottom="@dimen/bt_lMarginBottom"
-        android:text="@string/bt_Delete"
+        android:text="@string/bt_Eliminar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <androidx.constraintlayout.widget.Group
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        app:constraint_referenced_ids="tV_Bodega,eT_Bodega,tV_Color,eT_Color,tV_Origen,eT_Origen,tV_Graduacion,eT_Graduacion,tV_Fecha,eT_Fecha" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/bt_Edit_Editar"
         style="@style/bt_Style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/bt_lMarginStartEnd"
+        android:layout_marginEnd="@dimen/bt_lMarginStartEnd"
         android:layout_marginBottom="@dimen/bt_lMarginBottom"
-        android:text="@string/bt_Edit"
+        android:text="@string/bt_Editar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/bt_Cancelar_Editar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lMarginSmallDefault"
+        android:layout_marginEnd="@dimen/lMarginSmallDefault"
+        android:layout_marginBottom="@dimen/bt_lMarginBottom"
+        android:text="@string/bt_Cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bt_Edit_Editar"
+        app:layout_constraintStart_toEndOf="@+id/bt_Delete" />
 </androidx.constraintlayout.widget.ConstraintLayout>

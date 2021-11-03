@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Componentes de la interfaz activity_main -->
     <dimen name="bt_lMarginStartEnd">40dp</dimen>
     <dimen name="bt_lMarginBottom">30dp</dimen>
     <dimen name="bt_txSize">16sp</dimen>
-    <dimen name="lMarginDeafult">16dp</dimen>
-
-    <!-- Componentes de la interfaz agregar_activity -->
     <dimen name="eT_lMBottomDefault">-10dp</dimen>
     <dimen name="eT_lMTop_Default">4dp</dimen>
+    <dimen name="lMarginDefault">16dp</dimen>
     <dimen name="lMarginEndDefault">50dp</dimen>
+    <dimen name="lMarginSmallDefault">8dp</dimen>
     <dimen name="minHeight_Fix">48dp</dimen>
     <dimen name="tv_lMStartDeafult">30dp</dimen>
     <dimen name="tv_lMTop_Id">50dp</dimen>
     <dimen name="tv_lMTop_Deafult">30dp</dimen>
     <dimen name="tv_txSize">20sp</dimen>
-
-    <!-- Componentes de la interfaz editar_activity -->
 </resources>

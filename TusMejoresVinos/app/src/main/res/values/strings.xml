@@ -1,11 +1,18 @@
 <resources>
     <string name="app_name">Vinoteca</string>
-    <!-- Strings pertenecientes a la interfaz activity_main-->
-    <string name="bt_Add">Add</string>
-    <string name="bt_Edit">Edit</string>
+    <!-- Strings empleados en las interfaces activity_main y agregar_activity -->
+    <string name="bt_Agregar">Agregar</string>
+
+    <!-- Strings empleados en las interfaces activity_main y editar_activity -->
+    <string name="bt_Editar">Editar</string>
+
+    <!-- Strings empleados en las interfaces agregar_activity y editar_activity -->
+    <string name="bt_Cancelar">Cancelar</string>
+
+    <!-- Strings pertenecientes a la interfaz activity_main -->
     <string name="scrollView_Descripcion">ScrolllView que contiene los distintos vinos que se almacenan en la base de datos</string>
 
-    <!-- Strings pertenecientes a la interfaz agregar_activity-->
+    <!-- Strings pertenecientes a la interfaz agregar_activity -->
     <string name="eT_hint"></string>
     <string name="tV_Id">Id</string>
     <string name="tV_Nombre">Nombre</string>
@@ -15,6 +22,6 @@
     <string name="tV_Graduacion">Graduación</string>
     <string name="tV_Fecha">Fecha</string>
 
-    <!-- Strings pertenecientes a la interfaz editar_activity-->
-    <string name="bt_Delete">Delete</string>
+    <!-- Strings pertenecientes a la interfaz editar_activity -->
+    <string name="bt_Eliminar">Eliminar</string>
 </resources>

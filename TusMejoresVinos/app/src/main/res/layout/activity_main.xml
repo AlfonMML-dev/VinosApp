@@ -9,10 +9,10 @@
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="@dimen/lMarginDeafult"
-        android:layout_marginTop="@dimen/lMarginDeafult"
-        android:layout_marginEnd="@dimen/lMarginDeafult"
-        android:layout_marginBottom="@dimen/lMarginDeafult"
+        android:layout_marginStart="@dimen/lMarginDefault"
+        android:layout_marginTop="@dimen/lMarginDefault"
+        android:layout_marginEnd="@dimen/lMarginDefault"
+        android:layout_marginBottom="@dimen/lMarginDefault"
         android:contentDescription="@string/scrollView_Descripcion"
         app:layout_constraintBottom_toTopOf="@+id/bt_Add_Main"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/bt_lMarginStartEnd"
         android:layout_marginBottom="@dimen/bt_lMarginBottom"
-        android:text="@string/bt_Add"
+        android:text="@string/bt_Agregar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/bt_lMarginStartEnd"
         android:layout_marginBottom="@dimen/bt_lMarginBottom"
-        android:text="@string/bt_Edit"
+        android:text="@string/bt_Editar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

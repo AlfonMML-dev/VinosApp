@@ -192,9 +192,19 @@
         style="@style/bt_Style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/lMarginEndDefault"
+        android:layout_marginEnd="@dimen/bt_lMarginStartEnd"
         android:layout_marginBottom="@dimen/bt_lMarginBottom"
-        android:text="@string/bt_Add"
+        android:text="@string/bt_Agregar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/bt_Cancelar_Agregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/bt_lMarginStartEnd"
+        android:layout_marginBottom="@dimen/bt_lMarginBottom"
+        android:text="@string/bt_Cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
