@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="bt_Style">
+        <item name="fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textSize">@dimen/bt_txSize</item>
+    </style>
+
+    <style name="tv_Style">
+        <item name="fontFamily">sans-serif-black</item>
+        <item name="android:textSize">@dimen/tv_txSize</item>
+    </style>
+</resources>

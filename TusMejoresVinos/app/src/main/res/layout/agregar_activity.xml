@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tV_Id"
+        style="@style/tv_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tv_lMStartDeafult"
+        android:layout_marginTop="@dimen/tv_lMTop_Id"
+        android:text="@string/tV_Id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/eT_Id"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/lMarginEndDefault"
+        android:layout_marginBottom="@dimen/eT_lMBottomDefault"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:hint="@string/eT_hint"
+        android:inputType="number"
+        android:minHeight="@dimen/minHeight_Fix"
+        app:layout_constraintBottom_toBottomOf="@+id/tV_Id"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tV_Nombre"
+        style="@style/tv_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tv_lMStartDeafult"
+        android:layout_marginTop="@dimen/tv_lMTop_Deafult"
+        android:text="@string/tV_Nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tV_Id" />
+
+    <EditText
+        android:id="@+id/eT_Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/lMarginEndDefault"
+        android:layout_marginBottom="@dimen/eT_lMBottomDefault"
+        android:ems="10"
+        android:hint="@string/eT_hint"
+        android:inputType="text"
+        android:minHeight="@dimen/minHeight_Fix"
+        app:layout_constraintBottom_toBottomOf="@+id/tV_Nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/tV_Bodega"
+        style="@style/tv_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tv_lMStartDeafult"
+        android:layout_marginTop="@dimen/tv_lMTop_Deafult"
+        android:text="@string/tV_Bodega"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tV_Nombre" />
+
+    <EditText
+        android:id="@+id/eT_Bodega"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/lMarginEndDefault"
+        android:layout_marginBottom="@dimen/eT_lMBottomDefault"
+        android:ems="10"
+        android:hint="@string/eT_hint"
+        android:inputType="text"
+        android:minHeight="@dimen/minHeight_Fix"
+        app:layout_constraintBottom_toBottomOf="@+id/tV_Bodega"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/tV_Color"
+        style="@style/tv_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tv_lMStartDeafult"
+        android:layout_marginTop="@dimen/tv_lMTop_Deafult"
+        android:text="@string/tV_Color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tV_Bodega" />
+
+    <EditText
+        android:id="@+id/eT_Color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/lMarginEndDefault"
+        android:layout_marginBottom="@dimen/eT_lMBottomDefault"
+        android:ems="10"
+        android:hint="@string/eT_hint"
+        android:inputType="text"
+        android:minHeight="@dimen/minHeight_Fix"
+        app:layout_constraintBottom_toBottomOf="@+id/tV_Color"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/tV_Origen"
+        style="@style/tv_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tv_lMStartDeafult"
+        android:layout_marginTop="@dimen/tv_lMTop_Deafult"
+        android:text="@string/tV_Origen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tV_Color" />
+
+    <EditText
+        android:id="@+id/eT_Origen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/lMarginEndDefault"
+        android:layout_marginBottom="@dimen/eT_lMBottomDefault"
+        android:ems="10"
+        android:hint="@string/eT_hint"
+        android:inputType="text"
+        android:minHeight="@dimen/minHeight_Fix"
+        app:layout_constraintBottom_toBottomOf="@+id/tV_Origen"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/tV_Graduacion"
+        style="@style/tv_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tv_lMStartDeafult"
+        android:layout_marginTop="@dimen/tv_lMTop_Deafult"
+        android:text="@string/tV_Graduacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tV_Origen" />
+
+    <EditText
+        android:id="@+id/eT_Graduacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/lMarginEndDefault"
+        android:layout_marginBottom="@dimen/eT_lMBottomDefault"
+        android:ems="10"
+        android:hint="@string/eT_hint"
+        android:inputType="numberDecimal"
+        android:minHeight="@dimen/minHeight_Fix"
+        app:layout_constraintBottom_toBottomOf="@+id/tV_Graduacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/tV_Fecha"
+        style="@style/tv_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tv_lMStartDeafult"
+        android:layout_marginTop="@dimen/tv_lMTop_Deafult"
+        android:text="@string/tV_Fecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tV_Graduacion" />
+
+    <EditText
+        android:id="@+id/eT_Fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/lMarginEndDefault"
+        android:layout_marginBottom="@dimen/eT_lMBottomDefault"
+        android:ems="10"
+        android:hint="@string/eT_hint"
+        android:inputType="date"
+        android:minHeight="@dimen/minHeight_Fix"
+        app:layout_constraintBottom_toBottomOf="@+id/tV_Fecha"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/bt_Delete"
+        style="@style/bt_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/lMarginEndDefault"
+        android:layout_marginBottom="@dimen/bt_lMarginBottom"
+        android:text="@string/bt_Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

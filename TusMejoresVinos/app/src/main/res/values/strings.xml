@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">TusMejoresVinos</string>
+    <string name="app_name">Vinoteca</string>
+    <!-- Strings pertenecientes a la interfaz activity_main-->
+    <string name="bt_Add">Add</string>
+    <string name="bt_Edit">Edit</string>
+    <string name="scrollView_Descripcion">ScrolllView que contiene los distintos vinos que se almacenan en la base de datos</string>
+
+    <!-- Strings pertenecientes a la interfaz agregar_activity-->
+    <string name="eT_hint"></string>
+    <string name="tV_Id">Id</string>
+    <string name="tV_Nombre">Nombre</string>
+    <string name="tV_Bodega">Bodega</string>
+    <string name="tV_Color">Color</string>
+    <string name="tV_Origen">Origen</string>
+    <string name="tV_Graduacion">Graduación</string>
+    <string name="tV_Fecha">Fecha</string>
+
+    <!-- Strings pertenecientes a la interfaz editar_activity-->
+    <string name="bt_Delete">Delete</string>
 </resources>

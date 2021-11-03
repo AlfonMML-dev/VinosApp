@@ -6,13 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/lMarginDeafult"
+        android:layout_marginTop="@dimen/lMarginDeafult"
+        android:layout_marginEnd="@dimen/lMarginDeafult"
+        android:layout_marginBottom="@dimen/lMarginDeafult"
+        android:contentDescription="@string/scrollView_Descripcion"
+        app:layout_constraintBottom_toTopOf="@+id/bt_Add_Main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_Add_Main"
+        style="@style/bt_Style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="@dimen/bt_lMarginStartEnd"
+        android:layout_marginBottom="@dimen/bt_lMarginBottom"
+        android:text="@string/bt_Add"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/bt_Edit_Main"
+        style="@style/bt_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/bt_lMarginStartEnd"
+        android:layout_marginBottom="@dimen/bt_lMarginBottom"
+        android:text="@string/bt_Edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
