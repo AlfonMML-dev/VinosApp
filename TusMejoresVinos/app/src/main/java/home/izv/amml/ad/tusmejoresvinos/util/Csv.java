@@ -23,13 +23,13 @@ public class Csv {
             v.setColor(atributos[3].trim());
             v.setOrigen(atributos[4].trim());
             try {
-                v.setGraduacion(Double.parseDouble(atributos[4].trim()));
+                v.setGraduacion(Double.parseDouble(atributos[5].trim()));
             } catch (NumberFormatException e) {
                 Log.v(MainActivity.getTAG(), e.toString());
                 System.out.println("\n" + "Error al obtener la graduación");
             }
             try {
-                v.setFecha(Integer.parseInt(atributos[5].trim()));
+                v.setFecha(Integer.parseInt(atributos[6].trim()));
             } catch (NumberFormatException e) {
                 Log.v(MainActivity.getTAG(), e.toString());
                 System.out.println("\n" + "Error al obtener la fecha");

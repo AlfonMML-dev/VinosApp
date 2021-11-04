@@ -94,13 +94,18 @@ public class MainActivity extends AppCompatActivity {
     */
     private void seleccionarVinoPorId(){
         for (int i = 0; i < listaVinos.size(); i++) {
-            if(listaVinos.get(i).getId() == Long.parseLong(eT_Id.getText().toString())){
-                TextoVino vt = new TextoVino(this, listaVinos.get(i));
-                Intent intencion = vt.createIntent(contexto, EditarActivity.class);
-                contexto.startActivity(intencion);
+            if(!eT_Id.getText().toString().isEmpty()){
+                if(listaVinos.get(i).getId() == Long.parseLong(eT_Id.getText().toString())){
+                    TextoVino vt = new TextoVino(this, listaVinos.get(i));
+                    Intent intencion = vt.createIntent(contexto, EditarActivity.class);
+                    contexto.startActivity(intencion);
+                } else{
+                    Toast.makeText(contexto, "El id introducido no corresponde a ningún vino", Toast.LENGTH_SHORT).show();
+                }
             } else{
-                Toast.makeText(contexto, "El id introducido no corresponde a ningún vino", Toast.LENGTH_SHORT).show();
+                Toast.makeText(contexto, "El id no puede estar vacío", Toast.LENGTH_SHORT).show();
             }
+
         }
     }
 }

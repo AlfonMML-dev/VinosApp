@@ -111,29 +111,25 @@ public class AgregarActivity extends AppCompatActivity {
     * Método que devuelve un objeto de tipo Vino, a partir de los valores puestos en los EditText
     */
     private Vino obtenerVino(){
-        String[] atributos = new String[campos.length];
-        for (int i = 0; i < atributos.length; i++) {
-            atributos[i] = campos[i].getText().toString();
-        }
         Vino v = new Vino();
         try {
-            v.setId(Long.parseLong(atributos[0].trim()));
+            v.setId(Long.parseLong(campos[0].getText().toString().trim()));
         } catch(NumberFormatException e){
             Toast.makeText(contexto, "Error al transformar la cadena a número", Toast.LENGTH_SHORT).show();
         }
 
-        v.setNombre(atributos[1].trim());
-        v.setBodega(atributos[2].trim());
-        v.setColor(atributos[3].trim());
-        v.setOrigen(atributos[4].trim());
+        v.setNombre(campos[1].getText().toString().trim());
+        v.setBodega(campos[2].getText().toString().trim());
+        v.setColor(campos[3].getText().toString().trim());
+        v.setOrigen(campos[4].getText().toString().trim());
 
         try {
-            v.setGraduacion(Double.parseDouble(atributos[5].trim()));
+            v.setGraduacion(Double.parseDouble(campos[5].getText().toString()));
         } catch (NumberFormatException e) {
             Toast.makeText(contexto, "Error al obtener la graduación", Toast.LENGTH_SHORT).show();
         }
         try {
-            v.setFecha(Integer.parseInt(atributos[6].trim()));
+            v.setFecha(Integer.parseInt(campos[6].getText().toString()));
         } catch (NumberFormatException e) {
             Toast.makeText(contexto, "Error al obtener la fecha", Toast.LENGTH_SHORT).show();
         }

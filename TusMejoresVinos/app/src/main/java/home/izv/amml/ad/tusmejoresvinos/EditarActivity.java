@@ -91,6 +91,21 @@ public class EditarActivity extends AppCompatActivity {
     }
 
     /*
+    * Método que pese al nombre, elimina solamente el valor de los atributos del vino
+    * y no elimina el vino en sí, ya que mantiene el id
+    */
+    private boolean eliminarRegistro(){
+        Vino aux = vino;
+        aux.setNombre("");
+        aux.setBodega("");
+        aux.setColor("");
+        aux.setOrigen("");
+        aux.setGraduacion(0.0);
+        aux.setFecha(0);
+        return FileIO.writeLine(getExternalFilesDir(null), getString(R.string.nombreArchivo_csv), Csv.getCsv(aux));
+    }
+
+    /*
      * Devuelve true si ha se podido escribir el vino en el archivo csv, false si por el contrario no.
      */
     private boolean escribirLinea(){
