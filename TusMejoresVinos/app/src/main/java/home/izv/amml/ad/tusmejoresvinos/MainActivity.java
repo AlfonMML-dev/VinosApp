@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -95,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
                 TextoVino vt = new TextoVino(this, listaVinos.get(i));
                 Intent intencion = vt.createIntent(contexto, EditarActivity.class);
                 contexto.startActivity(intencion);
+            } else{
+                Toast.makeText(contexto, "El id introducido no corresponde a ningún vino", Toast.LENGTH_SHORT).show();
             }
         }
     }
