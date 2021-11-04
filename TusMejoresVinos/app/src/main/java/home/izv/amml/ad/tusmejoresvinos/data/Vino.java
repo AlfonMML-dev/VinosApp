@@ -27,9 +27,31 @@ public class Vino implements Serializable, Parcelable {
         this.fecha = fecha;
     }
 
+    protected Vino(Parcel in) {
+        id = in.readLong();
+        nombre = in.readString();
+        bodega = in.readString();
+        color = in.readString();
+        origen = in.readString();
+        graduacion = in.readDouble();
+        fecha = in.readInt();
+    }
+
     public Vino(){
         this(0,null, null, null, null, 0.0, 0);
     }
+
+    public static final Creator<Vino> CREATOR = new Creator<Vino>() {
+        @Override
+        public Vino createFromParcel(Parcel in) {
+            return new Vino(in);
+        }
+
+        @Override
+        public Vino[] newArray(int size) {
+            return new Vino[size];
+        }
+    };
 
     public long getId() {
         return id;

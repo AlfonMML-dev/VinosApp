@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static ArrayList<Vino> listaVinos;
     private Context contexto;
-    private EditText eT_Id;
+    private static EditText eT_Id;
 
     private LinearLayout linearL_vinos;
 
@@ -50,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
                 linearL_vinos.addView(vt);
             }
         }
+    }
+
+    public static EditText geteT_Id(){
+        return eT_Id;
     }
 
     public static ArrayList<Vino> getListaVinos() {

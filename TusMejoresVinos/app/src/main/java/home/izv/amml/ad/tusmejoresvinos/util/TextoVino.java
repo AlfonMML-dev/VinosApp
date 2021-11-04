@@ -9,6 +9,7 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 
 import home.izv.amml.ad.tusmejoresvinos.EditarActivity;
+import home.izv.amml.ad.tusmejoresvinos.MainActivity;
 import home.izv.amml.ad.tusmejoresvinos.R;
 import home.izv.amml.ad.tusmejoresvinos.data.Vino;
 
@@ -24,14 +25,15 @@ public class TextoVino extends androidx.appcompat.widget.AppCompatTextView imple
     public TextoVino(@NonNull Context context, Vino vino) {
         super(context);
         this.vino = vino;
-        this.setText(vino.getId() + ", "+ vino.getNombre() + ", " + vino.getBodega() + ", " + vino.getColor() + vino.getFecha());
+        this.setText(vino.getId() + ", "+ vino.getNombre() + ", " + vino.getBodega() + ", " + vino.getColor() + ", " + vino.getFecha());
         this.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         ponerId_EditText_Id_Editar_Main(vino.getId());
-        EditarVino(); }
+        EditarVino();
+    }
 
     //Con este método, se evita repetir código cada vez que se cree un Intent
     public Intent createIntent(Context contexto, Class clase){
@@ -52,8 +54,7 @@ public class TextoVino extends androidx.appcompat.widget.AppCompatTextView imple
     * con el vino que se va a editar
     */
     private void ponerId_EditText_Id_Editar_Main(long id){
-        EditText eT_Id = findViewById(R.id.eT_Id_btEditar_Main);
-        eT_Id.setText(eT_Id.getHint() + " " + id);
+        MainActivity.geteT_Id().setText(String.valueOf(id));
     }
 }
 
