@@ -25,4 +25,6 @@
 
     <!-- Strings pertenecientes a la interfaz editar_activity -->
     <string name="bt_Eliminar">Eliminar</string>
+
+    <string name="nombreArchivo_csv">vinosAlfonso.csv</string>
 </resources>
