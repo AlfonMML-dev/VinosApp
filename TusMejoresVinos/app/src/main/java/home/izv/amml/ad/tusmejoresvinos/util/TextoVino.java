@@ -19,7 +19,7 @@ public class TextoVino extends androidx.appcompat.widget.AppCompatTextView imple
     public TextoVino(@NonNull Context context, Vino vino) {
         super(context);
         this.vino = vino;
-        this.setText(vino.getNombre() + ", " + vino.getBodega() + ", " + vino.getFecha());
+        this.setText(vino.getId() + ", "+ vino.getNombre() + ", " + vino.getBodega() + ", " + vino.getColor() + vino.getFecha());
         this.setOnClickListener(this);
     }
 
@@ -29,7 +29,6 @@ public class TextoVino extends androidx.appcompat.widget.AppCompatTextView imple
     private void EditarVino(){
         Intent intent = new Intent(this.getContext(), EditarActivity.class);
         Bundle bundle = new Bundle();
-        //bundle.putString("idVino", Long.toString(vino.getId()));
         bundle.putParcelable("vino", this.vino);
         intent.putExtras(bundle);
         this.getContext().startActivity(intent);
