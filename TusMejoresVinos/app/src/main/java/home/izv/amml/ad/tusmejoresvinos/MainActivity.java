@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getName() + "xyzyx";
 
-    private ArrayList<Vino> listaVinos = new ArrayList<>();
+    private static ArrayList<Vino> listaVinos;
     private Button bt_Agregar;
     private Button bt_Editar;
     private Context contexto;
@@ -53,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public static ArrayList<Vino> getListaVinos() {
+        return listaVinos;
+    }
+
     public static String getTAG() {
         return TAG;
     }
@@ -68,13 +72,16 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, AgregarActivity.class);
             startActivity(intent);
         });
+
         bt_Editar = findViewById(R.id.bt_Editar_Main);
         bt_Editar.setOnClickListener((View view) -> {
             seleccionarVinoPorId();
         });
+
         contexto = this;
         eT_Id = findViewById(R.id.eT_Id_btEditar_Main);
         linearL_vinos = findViewById(R.id.linearL_vinos);
+        listaVinos = new ArrayList<>();
         escribirVinos();
     }
 
