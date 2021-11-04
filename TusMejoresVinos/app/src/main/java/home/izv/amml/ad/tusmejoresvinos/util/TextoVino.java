@@ -34,8 +34,8 @@ public class TextoVino extends androidx.appcompat.widget.AppCompatTextView imple
         EditarVino(); }
 
     //Con este método, se evita repetir código cada vez que se cree un Intent
-    private Intent createIntent(){
-        Intent intent = new Intent(this.getContext(), EditarActivity.class);
+    public Intent createIntent(Context contexto, Class clase){
+        Intent intent = new Intent(contexto, clase);
         Bundle bundle = new Bundle();
         bundle.putParcelable("vino", this.vino);
         intent.putExtras(bundle);
@@ -44,7 +44,7 @@ public class TextoVino extends androidx.appcompat.widget.AppCompatTextView imple
 
     //Se lanza la actividad correspondiente al intent creado en el método createIntent
     private void EditarVino(){
-        this.getContext().startActivity(createIntent());
+        this.getContext().startActivity(createIntent(this.getContext(), EditarActivity.class));
     }
 
     /*
@@ -53,7 +53,7 @@ public class TextoVino extends androidx.appcompat.widget.AppCompatTextView imple
     */
     private void ponerId_EditText_Id_Editar_Main(long id){
         EditText eT_Id = findViewById(R.id.eT_Id_btEditar_Main);
-        eT_Id.setHint(eT_Id.getHint() + " " + id);
+        eT_Id.setText(eT_Id.getHint() + " " + id);
     }
 }
 

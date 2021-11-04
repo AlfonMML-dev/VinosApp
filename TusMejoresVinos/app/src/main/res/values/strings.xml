@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Vinoteca</string>
+    <string name="nombreArchivo_csv">vinosAlfonso.csv</string>
+
     <!-- Strings empleados en las interfaces activity_main y agregar_activity -->
     <string name="bt_Agregar">Agregar</string>
 
@@ -25,6 +27,4 @@
 
     <!-- Strings pertenecientes a la interfaz editar_activity -->
     <string name="bt_Eliminar">Eliminar</string>
-
-    <string name="nombreArchivo_csv">vinosAlfonso.csv</string>
 </resources>
