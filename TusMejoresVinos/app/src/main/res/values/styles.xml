@@ -9,4 +9,9 @@
         <item name="fontFamily">sans-serif-black</item>
         <item name="android:textSize">@dimen/tv_txSize</item>
     </style>
+
+    <style name="tv_Style_Main">
+        <item name="fontFamily">sans-serif-black</item>
+        <item name="android:textSize">@dimen/tv_txSize</item>
+    </style>
 </resources>

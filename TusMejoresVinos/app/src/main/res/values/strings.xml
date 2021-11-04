@@ -10,6 +10,7 @@
     <string name="bt_Cancelar">Cancelar</string>
 
     <!-- Strings pertenecientes a la interfaz activity_main -->
+    <string name="eT_Id_btEditar_Main_hint">Id:</string>
     <string name="scrollView_Descripcion">ScrolllView que contiene los distintos vinos que se almacenan en la base de datos</string>
 
     <!-- Strings pertenecientes a la interfaz agregar_activity -->

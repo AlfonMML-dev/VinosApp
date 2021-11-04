@@ -5,12 +5,15 @@
     <dimen name="bt_txSize">16sp</dimen>
     <dimen name="eT_lMBottomDefault">-10dp</dimen>
     <dimen name="eT_lMTop_Default">4dp</dimen>
+    <dimen name="eT_lMEnd_Id_btEditar">70dp</dimen>
     <dimen name="lMarginDefault">16dp</dimen>
     <dimen name="lMarginEndDefault">50dp</dimen>
     <dimen name="lMarginSmallDefault">8dp</dimen>
     <dimen name="minHeight_Fix">48dp</dimen>
     <dimen name="tv_lMStartDeafult">30dp</dimen>
+    <dimen name="tv_lMarginSmallDeafult">20dp</dimen>
     <dimen name="tv_lMTop_Id">50dp</dimen>
     <dimen name="tv_lMTop_Deafult">30dp</dimen>
     <dimen name="tv_txSize">20sp</dimen>
+    <dimen name="tv_txSizeSmall">14sp</dimen>
 </resources>

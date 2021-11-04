@@ -14,7 +14,8 @@
         android:layout_marginEnd="@dimen/lMarginDefault"
         android:layout_marginBottom="@dimen/lMarginDefault"
         android:contentDescription="@string/scrollView_Descripcion"
-        app:layout_constraintBottom_toTopOf="@+id/bt_Add_Main"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        app:layout_constraintBottom_toTopOf="@+id/bt_Agregar_Main"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -26,7 +27,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/bt_Add_Main"
+        android:id="@+id/bt_Agregar_Main"
         style="@style/bt_Style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,13 +38,29 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/bt_Edit_Main"
+        android:id="@+id/bt_Editar_Main"
         style="@style/bt_Style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/bt_lMarginStartEnd"
+        android:layout_marginStart="16dp"
         android:layout_marginBottom="@dimen/bt_lMarginBottom"
         android:text="@string/bt_Editar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/bt_Agregar_Main" />
+
+    <EditText
+        android:id="@+id/eT_Id_btEditar_Main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lMarginSmallDefault"
+        android:layout_marginEnd="@dimen/eT_lMEnd_Id_btEditar"
+        android:layout_marginBottom="@dimen/bt_lMarginBottom"
+        android:ems="10"
+        android:hint="@string/eT_Id_btEditar_Main_hint"
+        android:inputType="number"
+        android:minHeight="@dimen/minHeight_Fix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_Editar_Main"
+        android:importantForAutofill="no" />
 </androidx.constraintlayout.widget.ConstraintLayout>

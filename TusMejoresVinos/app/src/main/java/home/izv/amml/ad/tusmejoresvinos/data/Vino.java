@@ -1,8 +1,12 @@
 package home.izv.amml.ad.tusmejoresvinos.data;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Vino {
+public class Vino implements Serializable, Parcelable {
 
     private long id;
     private String nombre;
@@ -129,5 +133,21 @@ public class Vino {
                 ", graduacion=" + graduacion +
                 ", fecha=" + fecha +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeLong(id);
+        parcel.writeString(nombre);
+        parcel.writeString(bodega);
+        parcel.writeString(color);
+        parcel.writeString(origen);
+        parcel.writeDouble(graduacion);
+        parcel.writeInt(fecha);
     }
 }
