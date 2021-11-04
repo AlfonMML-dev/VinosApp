@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TusMejoresVinos">
         <activity
+            android:name=".AgregarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditarActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

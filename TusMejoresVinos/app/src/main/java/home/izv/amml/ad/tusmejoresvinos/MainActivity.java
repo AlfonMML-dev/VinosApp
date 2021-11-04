@@ -23,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getName() + "xyzyx";
 
     private static ArrayList<Vino> listaVinos;
-    private Button bt_Agregar;
-    private Button bt_Editar;
     private Context contexto;
     private EditText eT_Id;
 
@@ -68,13 +66,13 @@ public class MainActivity extends AppCompatActivity {
     */
     public void initialize(){
 
-        bt_Agregar = findViewById(R.id.bt_Agregar_Main);
+        Button bt_Agregar = findViewById(R.id.bt_Agregar_Main);
         bt_Agregar.setOnClickListener((View view) -> {
             Intent intent = new Intent(this, AgregarActivity.class);
             startActivity(intent);
         });
 
-        bt_Editar = findViewById(R.id.bt_Editar_Main);
+        Button bt_Editar = findViewById(R.id.bt_Editar_Main);
         bt_Editar.setOnClickListener((View view) -> {
             seleccionarVinoPorId();
         });

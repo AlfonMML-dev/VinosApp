@@ -17,14 +17,13 @@ import home.izv.amml.ad.tusmejoresvinos.util.FileIO;
 
 public class AgregarActivity extends AppCompatActivity {
 
-    private Button bt_Agregar, bt_Cancelar;
     private Context contexto;
     private EditText eT_Id, eT_Nombre, eT_Bodega, eT_Color, eT_Origen, eT_Graduacion, eT_Fecha;
     private EditText[] campos = new EditText[7];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.agregar_activity);
         initialize();
     }
 
@@ -33,16 +32,6 @@ public class AgregarActivity extends AppCompatActivity {
      * A los botones se les pone una escucha.
      */
     private void initialize() {
-        bt_Agregar = findViewById(R.id.bt_Agregar_Agregar);
-        bt_Agregar.setOnClickListener((View view) -> {
-            agregarVino();
-        });
-        bt_Cancelar = findViewById(R.id.bt_Cancelar_Agregar);
-        bt_Cancelar.setOnClickListener((View view) -> {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-        });
-
         eT_Id = findViewById(R.id.eT_Id_Agregar);
         eT_Nombre = findViewById(R.id.eT_Nombre_Agregar);
         eT_Bodega = findViewById(R.id.eT_Bodega_Agregar);
@@ -60,6 +49,15 @@ public class AgregarActivity extends AppCompatActivity {
         campos[6] = eT_Fecha;
 
         contexto = this;
+        Button bt_Agregar = findViewById(R.id.bt_Agregar_Agregar);
+        bt_Agregar.setOnClickListener(view -> {
+            agregarVino();
+        });
+        Button bt_Cancelar = findViewById(R.id.bt_Cancelar_Agregar);
+        bt_Cancelar.setOnClickListener(view -> {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        });
     }
 
     /*

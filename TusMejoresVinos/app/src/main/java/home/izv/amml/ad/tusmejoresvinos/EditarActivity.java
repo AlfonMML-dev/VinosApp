@@ -16,7 +16,6 @@ import home.izv.amml.ad.tusmejoresvinos.util.FileIO;
 
 public class EditarActivity extends AppCompatActivity {
 
-    private Button bt_Eliminar, bt_Cancelar, bt_Editar;
     private Context contexto;
     private EditText eT_Id, eT_Nombre, eT_Bodega, eT_Color, eT_Origen, eT_Graduacion, eT_Fecha;
     private EditText[] campos = new EditText[7];
@@ -24,7 +23,7 @@ public class EditarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.editar_activity);
         initialize();
     }
 
@@ -106,27 +105,6 @@ public class EditarActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         vino = bundle.getParcelable("vino");
 
-        bt_Eliminar = findViewById(R.id.bt_Eliminar_Editar);
-        bt_Eliminar.setOnClickListener((View view) -> {
-            if(borrarLinea()){
-                Toast.makeText(contexto, "Vino borrado con éxito", Toast.LENGTH_SHORT).show();
-            } else{
-                Toast.makeText(contexto, "Error al borrar el vino", Toast.LENGTH_SHORT).show();
-            }
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-        });
-        bt_Cancelar = findViewById(R.id.bt_Cancelar_Editar);
-        bt_Cancelar.setOnClickListener((View view) -> {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-        });
-        bt_Editar = findViewById(R.id.bt_Editar_Editar);
-        bt_Editar.setOnClickListener((View view) -> {
-            editarRegistro();
-        });
-
-
         eT_Id = findViewById(R.id.eT_Id_Editar);
         eT_Id.setText(String.valueOf(vino.getId()));
         eT_Id.setEnabled(false);
@@ -152,6 +130,26 @@ public class EditarActivity extends AppCompatActivity {
         campos[6] = eT_Fecha;
 
         contexto = this;
+
+        Button bt_Eliminar = findViewById(R.id.bt_Eliminar_Editar);
+        bt_Eliminar.setOnClickListener(view -> {
+            if(borrarLinea()){
+                Toast.makeText(contexto, "Vino borrado con éxito", Toast.LENGTH_SHORT).show();
+            } else{
+                Toast.makeText(contexto, "Error al borrar el vino", Toast.LENGTH_SHORT).show();
+            }
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        });
+        Button bt_Cancelar = findViewById(R.id.bt_Cancelar_Editar);
+        bt_Cancelar.setOnClickListener(view -> {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        });
+        Button bt_Editar = findViewById(R.id.bt_Editar_Editar);
+        bt_Editar.setOnClickListener(view -> {
+            editarRegistro();
+        });
     }
 
     /*

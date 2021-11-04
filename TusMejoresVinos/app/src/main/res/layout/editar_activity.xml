@@ -204,41 +204,50 @@
                     android:importantForAutofill="no" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    android:id="@+id/bt_Eliminar_Editar"
+                    style="@style/bt_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/bt_lMarginStartEnd"
+                    android:layout_marginTop="@dimen/bt_lMarginTop"
+                    android:layout_marginBottom="@dimen/bt_lMarginBottom"
+                    android:text="@string/bt_Eliminar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/bt_Editar_Editar"
+                    style="@style/bt_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/bt_lMarginTop"
+                    android:layout_marginEnd="@dimen/bt_lMarginStartEnd"
+                    android:layout_marginBottom="@dimen/bt_lMarginBottom"
+                    android:text="@string/bt_Editar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/bt_Cancelar_Editar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/lMarginSmallDefault"
+                    android:layout_marginTop="@dimen/bt_lMarginTop"
+                    android:layout_marginEnd="@dimen/lMarginSmallDefault"
+                    android:layout_marginBottom="@dimen/bt_lMarginBottom"
+                    android:text="@string/bt_Cancelar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/bt_Editar_Editar"
+                    app:layout_constraintStart_toEndOf="@+id/bt_Eliminar_Editar"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/bt_Eliminar_Editar"
-        style="@style/bt_Style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/bt_lMarginStartEnd"
-        android:layout_marginBottom="@dimen/bt_lMarginBottom"
-        android:text="@string/bt_Eliminar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/bt_Editar_Editar"
-        style="@style/bt_Style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/bt_lMarginStartEnd"
-        android:layout_marginBottom="@dimen/bt_lMarginBottom"
-        android:text="@string/bt_Editar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/bt_Cancelar_Editar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/lMarginSmallDefault"
-        android:layout_marginEnd="@dimen/lMarginSmallDefault"
-        android:layout_marginBottom="@dimen/bt_lMarginBottom"
-        android:text="@string/bt_Cancelar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/bt_Editar_Editar"
-        app:layout_constraintStart_toEndOf="@+id/bt_Eliminar_Editar" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

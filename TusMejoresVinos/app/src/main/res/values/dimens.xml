@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="bt_lMarginStartEnd">40dp</dimen>
+    <dimen name="bt_lMarginTop">30dp</dimen>
     <dimen name="bt_lMarginBottom">30dp</dimen>
     <dimen name="bt_txSize">16sp</dimen>
     <dimen name="eT_lMBottomDefault">-10dp</dimen>
